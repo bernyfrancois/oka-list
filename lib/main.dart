@@ -12,9 +12,8 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return MaterialApp(
-      title: 'Oka List',
+      title: 'Oka Store',
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),

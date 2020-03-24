@@ -9,7 +9,6 @@ class RayonElement extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Card(
       margin: EdgeInsets.symmetric(
         vertical: 10.0
