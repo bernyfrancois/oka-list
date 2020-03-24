@@ -1,6 +1,6 @@
+import 'package:OkaStore/routes/product.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:list_app/routes/product.dart';
 
 class ProductElement extends StatelessWidget{
   String name;
@@ -28,29 +28,29 @@ class ProductElement extends StatelessWidget{
             height: 100,
             child: Center(
               child: ListTile(
-                dense: true,
-                leading: Container(
-                  width: 80.0,
-                  height: 80.0,
-                  child: Image.network(
-                    "$picUrl",
-                    fit: BoxFit.fitHeight,
+                  dense: true,
+                  leading: Container(
+                    width: 80.0,
+                    height: 80.0,
+                    child: Image.network(
+                      "$picUrl",
+                      fit: BoxFit.fitHeight,
+                    ),
                   ),
-                ),
-                title: Text(
-                  "$name",
-                  style: TextStyle(
-                    fontSize: 16.0,
+                  title: Text(
+                    "$name",
+                    style: TextStyle(
+                      fontSize: 16.0,
+                    ),
+                    maxLines: 2,
                   ),
-                  maxLines: 2,
-                ),
-                subtitle: Text(
-                  "$description",
-                  maxLines: 2,
-                  style: TextStyle(
-                    fontSize: 14.0
-                  ),
-                )
+                  subtitle: Text(
+                    "$description",
+                    maxLines: 2,
+                    style: TextStyle(
+                        fontSize: 14.0
+                    ),
+                  )
               ),
             ),
           ),

@@ -1,15 +1,18 @@
 import 'dart:convert';
-import 'package:flutter/material.dart';
-import 'package:list_app/main.dart';
-import 'package:list_app/models/product.model.dart';
-import 'package:http/http.dart' as http;
-import 'package:list_app/widget/product-element.dart';
 
-class ProductsList extends StatefulWidget{
+import 'package:OkaStore/main.dart';
+import 'package:OkaStore/models/product.model.dart';
+import 'package:OkaStore/widget/product-element.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+
+class ProductsList extends StatefulWidget {
   final productsUrl;
   final rayonTitle;
 
-  const ProductsList({Key key, this.productsUrl, this.rayonTitle}) : super(key: key);
+  const ProductsList({Key key, this.productsUrl, this.rayonTitle})
+      : super(key: key);
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState

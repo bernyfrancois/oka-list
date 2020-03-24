@@ -2,12 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:list_app/main.dart';
-import 'package:list_app/models/rayon.model.dart';
-import 'package:list_app/widget/rayon-element.dart';
+import 'package:OkaStore/main.dart';
+import 'package:OkaStore/models/rayon.model.dart';
+import 'package:OkaStore/widget/rayon-element.dart';
 import 'package:http/http.dart' as http;
 
-class Home extends StatefulWidget{
+class Home extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     return _HomeState();
@@ -15,7 +15,7 @@ class Home extends StatefulWidget{
 }
 
 class _HomeState extends State<Home> {
-  var dataUrl = "http://djemam.com/epsi/categories.json";
+  var dataUrl = "http://dev.okafrancois.fr/api/categories.json";
 
   Future<List> _getData(url) async {
     var data = await http.get(dataUrl);
@@ -23,8 +23,8 @@ class _HomeState extends State<Home> {
     var items = jsondata["items"];
 
     List<RayonModel> rayons = [];
-    
-    for(var el in items){
+
+    for (var el in items) {
       RayonModel rayon = RayonModel(el["id"], el["title"], el["products_url"]);
       rayons.add(rayon);
     }

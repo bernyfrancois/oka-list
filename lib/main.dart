@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:list_app/routes/splash-screen.dart';
+import 'package:OkaStore/routes/splash-screen.dart';
 
 const primaryColor = Color(0xffFBCB3B);
 const secondaryColor = Color(0xff0A111E);

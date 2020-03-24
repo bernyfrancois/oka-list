@@ -1,7 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:list_app/main.dart';
+import 'package:OkaStore/main.dart';
 
 class Product extends StatefulWidget{
   final title;
