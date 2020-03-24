@@ -21,17 +21,13 @@ class _HomeState extends State<Home> {
     var data = await http.get(dataUrl);
     var jsondata = json.decode(utf8.decode(data.bodyBytes));
     var items = jsondata["items"];
-    print(items[0]["title"]);
 
     List<RayonModel> rayons = [];
     
     for(var el in items){
       RayonModel rayon = RayonModel(el["id"], el["title"], el["products_url"]);
-      print(rayon);
       rayons.add(rayon);
     }
-
-    print(rayons);
     return rayons;
   }
   @override
@@ -55,7 +51,6 @@ class _HomeState extends State<Home> {
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               final data = snapshot.data;
               if(snapshot.hasData){
-                print(data.length);
                 return ListView.builder(
                   itemCount: snapshot.data.length,
                   itemBuilder: (BuildContext context, int index){
