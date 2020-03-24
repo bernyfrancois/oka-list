@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:OkaStore/main.dart';
 import 'package:OkaStore/models/rayon.model.dart';
 import 'package:OkaStore/widget/rayon-element.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class Home extends StatefulWidget {
@@ -15,7 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  var dataUrl = "http://dev.okafrancois.fr/api/categories.json";
+  var dataUrl = "http://djemam.com/epsi/categories.json";
 
   Future<List> _getData(url) async {
     var data = await http.get(dataUrl);
